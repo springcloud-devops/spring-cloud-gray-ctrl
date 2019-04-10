@@ -2564,3 +2564,287 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 [17:36:39:191] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
 [17:36:39:192] [INFO] - org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:524) - Initializing Servlet 'dispatcherServlet'
 [17:36:39:201] [INFO] - org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:546) - Completed initialization in 9 ms
+[17:37:28:189] [INFO] - org.springframework.boot.logging.DeferredLog.logTo(DeferredLog.java:227) - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[17:37:28:362] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$635291ac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[17:37:28:947] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:675) - No active profile set, falling back to default profiles: default
+[17:37:30:063] [INFO] - org.springframework.cloud.context.scope.GenericScope.setSerializationId(GenericScope.java:294) - BeanFactory id=6ebf00ad-9cbb-3df3-8eb6-f7cd8efa0f72
+[17:37:30:152] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$47388eaf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[17:37:30:168] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$635291ac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[17:37:30:671] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:90) - Tomcat initialized with port(s): 8083 (http)
+[17:37:30:691] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8083"]
+[17:37:30:698] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting service [Tomcat]
+[17:37:30:698] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.17]
+[17:37:30:903] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+[17:37:30:903] [INFO] - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:296) - Root WebApplicationContext: initialization completed in 1941 ms
+[17:37:30:993] [INFO] - com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[17:37:31:001] [INFO] - com.netflix.config.DynamicPropertyFactory.getInstance(DynamicPropertyFactory.java:281) - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@3e8b2fcc
+[17:37:32:057] [INFO] - org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver.<init>(EndpointLinksResolver.java:59) - Exposing 2 endpoint(s) beneath base path '/actuator'
+[17:37:32:112] [INFO] - com.netflix.config.sources.URLConfigurationSource.<init>(URLConfigurationSource.java:122) - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[17:37:32:216] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+[17:37:33:165] [INFO] - org.springframework.cloud.netflix.eureka.InstanceInfoFactory.create(InstanceInfoFactory.java:71) - Setting initial instance status as: STARTING
+[17:37:33:211] [INFO] - com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:349) - Initializing Eureka in region us-east-1
+[17:37:33:670] [INFO] - com.netflix.discovery.provider.DiscoveryJerseyProvider.<init>(DiscoveryJerseyProvider.java:70) - Using JSON encoding codec LegacyJacksonJson
+[17:37:33:670] [INFO] - com.netflix.discovery.provider.DiscoveryJerseyProvider.<init>(DiscoveryJerseyProvider.java:71) - Using JSON decoding codec LegacyJacksonJson
+[17:37:33:764] [INFO] - com.netflix.discovery.provider.DiscoveryJerseyProvider.<init>(DiscoveryJerseyProvider.java:80) - Using XML encoding codec XStreamXml
+[17:37:33:765] [INFO] - com.netflix.discovery.provider.DiscoveryJerseyProvider.<init>(DiscoveryJerseyProvider.java:81) - Using XML decoding codec XStreamXml
+[17:37:33:947] [INFO] - com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+[17:37:34:262] [INFO] - com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:958) - Disable delta property : false
+[17:37:34:263] [INFO] - com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:959) - Single vip registry refresh property : null
+[17:37:34:263] [INFO] - com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:960) - Force full registry fetch : false
+[17:37:34:263] [INFO] - com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961) - Application is null : false
+[17:37:34:263] [INFO] - com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:962) - Registered Applications size is zero : true
+[17:37:34:263] [INFO] - com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:964) - Application version is -1: true
+[17:37:34:264] [INFO] - com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1047) - Getting all instance registry info from the eureka server
+[17:37:34:418] [INFO] - com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1056) - The response status is 200
+[17:37:34:420] [INFO] - com.netflix.discovery.DiscoveryClient.initScheduledTasks(DiscoveryClient.java:1270) - Starting heartbeat executor: renew interval is: 10
+[17:37:34:422] [INFO] - com.netflix.discovery.InstanceInfoReplicator.<init>(InstanceInfoReplicator.java:60) - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[17:37:34:426] [INFO] - com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:449) - Discovery Client initialized at timestamp 1554889054425 with initial instances count: 4
+[17:37:34:428] [INFO] - org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:42) - Registering application SERVICEB with eureka with status UP
+[17:37:34:429] [INFO] - com.netflix.discovery.DiscoveryClient$3.notify(DiscoveryClient.java:1305) - Saw local status change event StatusChangeEvent [timestamp=1554889054429, current=UP, previous=STARTING]
+[17:37:34:431] [INFO] - com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:826) - DiscoveryClient_SERVICEB/192.168.0.223:8083-59020183: registering service...
+[17:37:34:430] [INFO] - springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:120) - Context refreshed
+[17:37:34:451] [INFO] - springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:123) - Found 1 custom documentation plugin(s)
+[17:37:34:470] [INFO] - com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:835) - DiscoveryClient_SERVICEB/192.168.0.223:8083-59020183 - registration status: 204
+[17:37:34:475] [INFO] - springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41) - Scanning for api listing references
+[17:37:34:516] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8083"]
+[17:37:34:545] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204) - Tomcat started on port(s): 8083 (http) with context path ''
+[17:37:34:546] [INFO] - org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.onApplicationEvent(EurekaAutoServiceRegistration.java:141) - Updating port to 8083
+[17:37:34:548] [INFO] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:59) - Started ServiceBApplication in 7.214 seconds (JVM running for 8.981)
+[17:37:34:733] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[17:37:34:734] [INFO] - org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:524) - Initializing Servlet 'dispatcherServlet'
+[17:37:34:745] [INFO] - org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:546) - Completed initialization in 10 ms
+[17:38:14:226] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:14:410] [INFO] - com.netflix.config.ChainedDynamicProperty$ChainLink.checkAndFlip(ChainedDynamicProperty.java:115) - Flipping property: serviceB.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+[17:38:14:422] [INFO] - com.netflix.util.concurrent.ShutdownEnabledTimer.<init>(ShutdownEnabledTimer.java:58) - Shutdown hook installed for: NFLoadBalancer-PingTimer-serviceB
+[17:38:14:426] [INFO] - com.netflix.loadbalancer.BaseLoadBalancer.initWithConfig(BaseLoadBalancer.java:192) - Client: serviceB instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=serviceB,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+[17:38:14:432] [INFO] - com.netflix.loadbalancer.DynamicServerListLoadBalancer.enableAndInitLearnNewServersFeature(DynamicServerListLoadBalancer.java:214) - Using serverListUpdater PollingServerListUpdater
+[17:38:14:448] [INFO] - com.netflix.config.ChainedDynamicProperty$ChainLink.checkAndFlip(ChainedDynamicProperty.java:115) - Flipping property: serviceB.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+[17:38:14:449] [INFO] - com.netflix.loadbalancer.DynamicServerListLoadBalancer.restOfInit(DynamicServerListLoadBalancer.java:150) - DynamicServerListLoadBalancer for client serviceB initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=serviceB,current list of Servers=[192.168.0.223:8083, 192.168.0.223:8083],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:2;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.0.223:8083;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@1dbab86e
+[17:38:14:490] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:14:491] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:14:491] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:14:491] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:14:491] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:14:552] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:15:436] [INFO] - com.netflix.config.ChainedDynamicProperty$ChainLink.checkAndFlip(ChainedDynamicProperty.java:115) - Flipping property: serviceB.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+[17:38:16:320] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:16:321] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:16:321] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:16:321] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:16:322] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:16:322] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:16:326] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:16:578] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:16:579] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:16:580] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:16:580] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:16:580] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:16:580] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:16:582] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:16:768] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:16:769] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:16:769] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:16:770] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:16:770] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:16:770] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:16:773] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:16:940] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:16:941] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:16:941] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:16:942] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:16:942] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:16:943] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:16:945] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:17:104] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:17:105] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:17:105] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:17:106] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:17:106] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:17:106] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:17:108] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:17:269] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:17:271] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:17:271] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:17:272] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:17:272] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:17:273] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:17:275] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:17:458] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:17:461] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:17:462] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:17:463] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:17:463] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:17:464] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:17:466] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:17:597] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:17:598] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:17:598] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:17:598] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:17:599] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:17:599] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:17:600] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:17:779] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:17:780] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:17:781] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:17:781] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:17:781] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:17:781] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:17:783] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:17:919] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:17:920] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:17:921] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:17:921] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:17:921] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:17:921] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:17:924] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:18:088] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:18:090] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:18:090] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:18:091] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:18:092] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:18:092] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:18:094] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:18:260] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:18:262] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:18:263] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:18:263] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:18:263] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:18:263] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:18:265] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:18:451] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:18:452] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:18:453] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:18:453] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:18:453] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:18:456] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:18:458] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:18:628] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:18:631] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:18:632] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:18:634] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:18:634] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:18:635] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:18:640] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:18:796] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:18:798] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:18:799] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:18:801] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:18:801] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:18:801] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:18:805] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:18:929] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:18:929] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:18:929] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:18:930] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:18:930] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:18:930] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:18:931] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:19:103] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:19:103] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:19:103] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:19:104] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:19:104] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:19:104] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:19:105] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:19:274] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:19:275] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:19:276] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:19:277] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:19:277] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:19:277] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:19:278] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:19:453] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:19:454] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:19:454] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:19:454] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:19:454] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:19:454] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:19:456] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:19:604] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:19:605] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:19:606] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:19:606] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:19:606] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:19:607] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:19:609] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:19:770] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:19:771] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:19:771] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:19:772] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:19:772] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:19:772] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:19:773] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:19:942] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:19:943] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:19:943] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:19:943] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:19:944] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:19:944] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:19:946] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:20:116] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:20:117] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:20:117] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:20:118] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:20:118] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:20:118] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:20:120] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:20:272] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:20:273] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:20:273] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:20:273] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:20:274] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:20:274] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:20:276] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:20:447] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:20:448] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:20:449] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:20:449] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:20:450] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:20:450] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:20:451] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:20:626] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:20:627] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:20:627] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:20:628] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:20:628] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:20:628] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:20:630] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:20:801] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:20:802] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:20:803] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:20:803] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:20:803] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:20:803] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:20:806] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:21:008] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:21:009] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:21:009] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:21:009] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:21:010] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:21:010] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:21:010] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:21:193] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:21:193] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:21:193] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:21:194] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:21:194] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:21:194] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:21:196] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:21:374] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:21:375] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:21:375] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:21:375] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:21:375] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:21:376] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:21:377] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:38:21:543] [INFO] - serviceA.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8081/xx/test/112321
+[17:38:21:543] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:20) - grayRule key is : null,
+[17:38:21:544] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:21:544] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:21:545] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:25) - grayRule server is : 192.168.0.223:8083
+[17:38:21:545] [INFO] - serviceA.gray.GrayRule.choose(GrayRule.java:29) - grayRule metaVersion is : 1.0
+[17:38:21:546] [INFO] - serviceB.interceptors.ParamInterceptor.preHandle(ParamInterceptor.java:19) - uri is http://192.168.0.223:8083/b/hello/112321
+[17:41:38:472] [INFO] - com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
+[17:42:34:266] [INFO] - com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver.getClusterEndpoints(ConfigClusterResolver.java:43) - Resolving eureka endpoints via configuration
