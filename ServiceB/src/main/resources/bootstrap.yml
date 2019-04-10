@@ -10,7 +10,7 @@ eureka:
   instance:
     appname: ${spring.application.name}
     metadata-map:
-      version: 1.0
+      version: 2.0
     preferIpAddress: true
     leaseRenewalIntervalInSeconds: 10     # 续约更新时间间隔（默认30秒）
     leaseExpirationDurationInSeconds: 30  # 续约到期时间（默认90秒）

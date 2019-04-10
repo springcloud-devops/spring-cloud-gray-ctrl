@@ -26,7 +26,7 @@ public class BTestController {
     public BaseResponse sayHello(@PathVariable("userName") String username) {
         BaseResponse baseResponse = new BaseResponse();
         baseResponse.setCode(200);
-        baseResponse.setData("serviceB: hello "+username);
+        baseResponse.setData("serviceB-gray: hello "+username);
         baseResponse.setStatus("success");
         System.out.println(baseResponse.getData());
         return baseResponse;
