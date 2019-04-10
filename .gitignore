@@ -1,0 +1,11 @@
+*.log
+*.temp
+/vendor
+/target/
+*.jar
+*.war
+*.apk
+.idea
+.project
+/build/
+*.zip
