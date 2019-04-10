@@ -11,6 +11,7 @@
     <packaging>jar</packaging>
     <name>ServiceB</name>
     <artifactId>ServiceB</artifactId>
+    <version>${parent.version}</version>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -59,7 +60,6 @@
 
     </dependencies>
     <build>
-        <finalName>serviceB</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

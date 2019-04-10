@@ -12,6 +12,7 @@
 
     <name>ServiceA</name>
     <artifactId>ServiceA</artifactId>
+    <version>${parent.version}</version>
     <dependencies>
 
         <dependency>
@@ -73,7 +74,6 @@
 
     </dependencies>
     <build>
-        <finalName>serviceA</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
