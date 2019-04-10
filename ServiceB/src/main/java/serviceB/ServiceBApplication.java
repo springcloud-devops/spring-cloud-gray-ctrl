@@ -12,15 +12,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @ServletComponentScan
 @EnableTransactionManagement
-//注册服务于eureka
 @EnableDiscoveryClient
-//熔断器
-//开启feign 调用
 @EnableFeignClients(basePackages = {"api"})
-
-/**
- * 直接继承springbootServletInitializer 可以实现tomcat 启动
- */
 public class ServiceBApplication extends SpringBootServletInitializer {
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {

@@ -1,4 +1,0 @@
-FROM openjdk:8u171-jre-alpine
-WORKDIR /serviceB
-COPY ./target/*serviceB-*.jar /serviceB
-CMD java -jar *serviceB-*.jar
