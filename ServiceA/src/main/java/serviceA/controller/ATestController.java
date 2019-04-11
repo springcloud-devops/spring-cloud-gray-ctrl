@@ -14,10 +14,9 @@ import org.springframework.web.bind.annotation.*;
  * Date： 2017/8/17.
  */
 
-@Api(value = "/api/pc", description = "测试接口API Controller", basePath = "http://www.neudev.cn/", position = 1)
+@Api(value = "/xx", description = "测试接口API Controller", basePath = "http://www.neudev.cn/", position = 1)
 @RestController
 @RequestMapping("/xx")
-@RefreshScope
 public class ATestController {
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger("TestController");
 
