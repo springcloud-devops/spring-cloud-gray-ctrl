@@ -31,6 +31,13 @@ public class ATestController {
         return baseResponse;
     }
 
+    @RequestMapping (value = "test_link/{userName}", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public BaseResponse  test_link(@PathVariable("userName") String username) {
+        BaseResponse baseResponse =serviceBApi.sayLinkHello(username);
+        return baseResponse;
+    }
+
 
 
 

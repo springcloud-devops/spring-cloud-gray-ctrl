@@ -10,8 +10,15 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ServiceBApiHystrix implements ServiceBApi {
-    @Override
     public BaseResponse sayHello(String name) {
+        BaseResponse baseResponse = new BaseResponse();
+        baseResponse.setCode(500);
+        baseResponse.setData("serviceB is down ");
+        baseResponse.setStatus("down");
+        return  baseResponse;
+    }
+
+    public BaseResponse sayLinkHello(String name) {
         BaseResponse baseResponse = new BaseResponse();
         baseResponse.setCode(500);
         baseResponse.setData("serviceB is down ");

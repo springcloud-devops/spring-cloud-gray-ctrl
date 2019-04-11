@@ -17,3 +17,6 @@ eureka:
     instance-id: ${spring.cloud.client.ip-address}:${server.port}-${random.int}
 server:
   port: 8083
+serviceC:
+  ribbon:
+    NFLoadBalancerRuleClassName: serviceB.gray.GrayRule

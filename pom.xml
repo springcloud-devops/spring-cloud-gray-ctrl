@@ -11,6 +11,7 @@
     <modules>
         <module>ServiceA</module>
         <module>ServiceB</module>
+        <module>ServiceC</module>
         <module>common</module>
         <module>api</module>
     </modules>

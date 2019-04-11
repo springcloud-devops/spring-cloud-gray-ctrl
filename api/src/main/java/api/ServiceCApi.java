@@ -14,15 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 
 
-@FeignClient(value = "serviceB",fallback = ServiceBApiHystrix.class)
-public interface ServiceBApi {
-
-    public final static  String serviceContext ="/b";
-
-    @RequestMapping(value = serviceContext+"/hello/{userName}",method = RequestMethod.GET)
-    BaseResponse sayHello(@PathVariable(value = "userName")String name);
-
-
+@FeignClient(value = "serviceC")
+public interface ServiceCApi {
+    public final static  String serviceContext ="/c";
     @RequestMapping(value = serviceContext+"/hello_link/{userName}",method = RequestMethod.GET)
-    BaseResponse sayLinkHello(@PathVariable(value = "userName")String name);
+    BaseResponse sayLinkHello(@PathVariable(value = "userName") String name);
+
 }

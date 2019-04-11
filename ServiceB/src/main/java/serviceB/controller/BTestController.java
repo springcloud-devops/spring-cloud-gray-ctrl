@@ -1,8 +1,10 @@
 package serviceB.controller;
 
+import api.ServiceCApi;
 import demo.sdk.BaseResponse;
 import io.swagger.annotations.Api;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +23,8 @@ import javax.servlet.http.HttpServletRequest;
 public class BTestController {
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger("TestController");
 
+  @Autowired
+   private ServiceCApi serviceCApi;
 
     @RequestMapping(value = "/hello/{userName}",
             method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -35,5 +39,12 @@ public class BTestController {
         return baseResponse;
     }
 
+    @RequestMapping(value = "/hello_link/{userName}",
+            method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public BaseResponse helloLink2C(@PathVariable("userName") String username, HttpServletRequest request) {
+        BaseResponse baseResponse = serviceCApi.sayLinkHello(username);
+        return baseResponse;
+    }
 
 }
