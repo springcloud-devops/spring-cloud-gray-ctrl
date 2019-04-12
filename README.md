@@ -11,6 +11,7 @@
 ```$txt
    hystrix 对于每一个服务启动了一个线程池做调用，如果启动了线程池，则其实请求会复制到对应的hystrix 的线程里，
    这时候再去调用ribbon 做负载均衡是获取不到线程变量的，即此时的 RequestContext ，RequestHoder 等使用ThreadLocal
-   是无效的。
+   是无效的。可以使用过滤器，使用hystrix的线程变量在ribbon 负载均衡的时候获取对应的自定义信息，
+   从而实现定制化的负载均衡
 
 ```
