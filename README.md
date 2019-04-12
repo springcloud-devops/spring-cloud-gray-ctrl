@@ -7,7 +7,7 @@
 - 5. FeignClient 方式进行链路调度的header传递
 - 6. 本项目demo用例不直接依赖官方的springboot parent依赖，依赖于dependencies，所以在使用过程中可能存在差异
       但是在使用的过程中，直接引入gray-ctrl-starter即可。
-- 7. 参阅文档。[spring cloud 官方文档](https://spring.io/projects/spring-cloud)
+- 7. 参阅文档：[spring cloud 官方文档](https://spring.io/projects/spring-cloud)
 ### hystrix影响获取header的问题
 ```$txt
    hystrix 对于每一个服务启动了一个线程池做调用，如果启动了线程池，则其实请求会复制到对应的hystrix 的线程里，
