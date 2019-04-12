@@ -11,8 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by :Guozhihua
  * Date： 2017/8/28.
  */
-@FeignClient(value = "gateway")
-@RequestMapping(value = "/api/")
+@FeignClient(value = "gateway",path = "/api/")
 public interface GatewayApi {
 
     @RequestMapping(value = "b/b/hello/{userName}",method = RequestMethod.GET)

@@ -14,10 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 
 
-@FeignClient(value = "serviceC")
+@FeignClient(value = "serviceC",path = "/c")
 public interface ServiceCApi {
-    public final static  String serviceContext ="/c";
-    @RequestMapping(value = serviceContext+"/hello_link/{userName}",method = RequestMethod.GET)
+    @RequestMapping(value = "/hello_link/{userName}",method = RequestMethod.GET)
     BaseResponse sayLinkHello(@PathVariable(value = "userName") String name);
 
 }

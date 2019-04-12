@@ -19,4 +19,17 @@ server:
   port: 8083
 serviceC:
   ribbon:
-    NFLoadBalancerRuleClassName: org.ext.sc.general.rule.GrayRule
+    NFLoadBalancerRuleClassName: org.ext.sc.hystrix.rule.GrayRule
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  propagate:
+    request-attribute:
+      enabled: true
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000

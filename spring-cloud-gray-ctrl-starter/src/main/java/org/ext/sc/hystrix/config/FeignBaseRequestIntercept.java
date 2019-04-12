@@ -1,4 +1,4 @@
-package org.ext.sc.general.feign;
+package org.ext.sc.hystrix.config;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
 
 public class FeignBaseRequestIntercept implements RequestInterceptor {
+
+
     @Override
     public void apply(RequestTemplate requestTemplate) {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder

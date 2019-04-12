@@ -23,4 +23,20 @@ server:
 
 serviceB:
   ribbon:
-    NFLoadBalancerRuleClassName: org.ext.sc.general.rule.GrayRule
+    NFLoadBalancerRuleClassName: org.ext.sc.hystrix.rule.GrayRule
+feign:
+  hystrix:
+    enabled: true
+hystrix1:
+  propagate:
+    request-attribute:
+      enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000000

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import serviceA.pojo.Video;
 
 /**
  * Created by :Guozhihua
@@ -25,6 +26,8 @@ public class ATestController {
     private GatewayApi gatewayApi;
 
 
+    @Autowired
+    private  ServiceBApi serviceBApi;
     @RequestMapping (value = "test/{userName}", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public BaseResponse  test(@PathVariable("userName") String username) {
@@ -39,6 +42,19 @@ public class ATestController {
         return baseResponse;
     }
 
+    @RequestMapping (value = "test1/{userName}", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public BaseResponse  test1(@PathVariable("userName") String username) {
+        BaseResponse baseResponse =serviceBApi.sayHello(username);
+        return baseResponse;
+    }
+
+    @RequestMapping (value = "test_link1/{userName}", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public BaseResponse  test_link1(@PathVariable("userName") String username) {
+        BaseResponse baseResponse =serviceBApi.sayLinkHello(username);
+        return baseResponse;
+    }
 
 
 
