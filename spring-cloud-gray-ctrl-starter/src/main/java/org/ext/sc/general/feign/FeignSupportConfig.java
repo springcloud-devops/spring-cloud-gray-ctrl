@@ -1,7 +1,6 @@
-package demo.sdk.feiginconfig;
+package org.ext.sc.general.feign;
 
 
-import demo.sdk.interceptor.FeignBaseRequestIntercept;
 import feign.RequestInterceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

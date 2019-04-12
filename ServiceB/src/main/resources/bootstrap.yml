@@ -19,4 +19,4 @@ server:
   port: 8083
 serviceC:
   ribbon:
-    NFLoadBalancerRuleClassName: serviceB.gray.GrayRule
+    NFLoadBalancerRuleClassName: org.ext.sc.general.rule.GrayRule

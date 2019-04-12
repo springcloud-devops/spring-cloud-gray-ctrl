@@ -23,4 +23,4 @@ server:
 
 serviceB:
   ribbon:
-    NFLoadBalancerRuleClassName: serviceA.gray.GrayRule
+    NFLoadBalancerRuleClassName: org.ext.sc.general.rule.GrayRule

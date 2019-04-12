@@ -1,5 +1,6 @@
 package serviceA.controller;
 
+import api.GatewayApi;
 import api.ServiceBApi;
 import demo.sdk.BaseResponse;
 import io.swagger.annotations.Api;
@@ -21,20 +22,20 @@ public class ATestController {
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger("TestController");
 
     @Autowired
-    private ServiceBApi serviceBApi;
+    private GatewayApi gatewayApi;
 
 
     @RequestMapping (value = "test/{userName}", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public BaseResponse  test(@PathVariable("userName") String username) {
-        BaseResponse baseResponse =serviceBApi.sayHello(username);
+        BaseResponse baseResponse =gatewayApi.sayHelloB(username);
         return baseResponse;
     }
 
     @RequestMapping (value = "test_link/{userName}", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public BaseResponse  test_link(@PathVariable("userName") String username) {
-        BaseResponse baseResponse =serviceBApi.sayLinkHello(username);
+        BaseResponse baseResponse =gatewayApi.sayLinkHelloB(username);
         return baseResponse;
     }
 

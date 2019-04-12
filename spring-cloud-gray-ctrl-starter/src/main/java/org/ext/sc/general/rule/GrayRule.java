@@ -1,4 +1,4 @@
-package serviceA.gray;
+package org.ext.sc.general.rule;
 
 import com.netflix.loadbalancer.Server;
 import com.netflix.loadbalancer.ZoneAvoidanceRule;
@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.Map;
 
 public class GrayRule extends ZoneAvoidanceRule {
+
+
 
     private Logger logger = LoggerFactory.getLogger(GrayRule.class);
 

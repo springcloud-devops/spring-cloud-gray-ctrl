@@ -1,5 +1,6 @@
 package serviceB.controller;
 
+import api.GatewayApi;
 import api.ServiceCApi;
 import demo.sdk.BaseResponse;
 import io.swagger.annotations.Api;
@@ -24,7 +25,7 @@ public class BTestController {
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger("TestController");
 
   @Autowired
-   private ServiceCApi serviceCApi;
+   private GatewayApi gatewayApi;
 
     @RequestMapping(value = "/hello/{userName}",
             method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -43,7 +44,7 @@ public class BTestController {
             method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public BaseResponse helloLink2C(@PathVariable("userName") String username, HttpServletRequest request) {
-        BaseResponse baseResponse = serviceCApi.sayLinkHello(username);
+        BaseResponse baseResponse = gatewayApi.sayLinkHelloC(username);
         return baseResponse;
     }
 
