@@ -5,5 +5,5 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackages = {"api"})
-public class GrayConfig {
+public class ApiConfig {
 }
