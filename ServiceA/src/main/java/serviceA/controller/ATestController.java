@@ -6,10 +6,10 @@ import demo.sdk.BaseResponse;
 import io.swagger.annotations.Api;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import serviceA.pojo.Video;
+
+import javax.annotation.Resource;
 
 /**
  * Created by :Guozhihua
@@ -24,9 +24,7 @@ public class ATestController {
 
     @Autowired
     private GatewayApi gatewayApi;
-
-
-    @Autowired
+    @Resource
     private  ServiceBApi serviceBApi;
     @RequestMapping (value = "test/{userName}", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
@@ -52,7 +50,7 @@ public class ATestController {
     @RequestMapping (value = "test_link1/{userName}", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public BaseResponse  test_link1(@PathVariable("userName") String username) {
-        BaseResponse baseResponse =serviceBApi.sayLinkHello(username);
+        BaseResponse baseResponse =serviceBApi.sayLinkHelloDirc(username);
         return baseResponse;
     }
 

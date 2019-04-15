@@ -19,18 +19,18 @@ public class GrayRule extends ZoneAvoidanceRule {
     @Override
     public Server choose(Object key) {
         RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
-        String version = ((ServletRequestAttributes) requestAttributes).getRequest().getHeader("version");
-        logger.info("grayRule key is : {},version is {} ，threadName is {}",key,version,Thread.currentThread().getName());
-        if(!StringUtils.isEmpty(version)){
-            List<Server> serverList = this.getPredicate().getEligibleServers(this.getLoadBalancer().getAllServers(), key);
-            for (Server server : serverList) {
-                logger.info("grayRule server is : {}",server);
-                Map<String, String> metadata;
-                metadata = ((DiscoveryEnabledServer) server).getInstanceInfo().getMetadata();
-                String metaVersion = metadata.get("version");
-                logger.info("grayRule metaVersion is : {}",metaVersion);
-                if (!StringUtils.isEmpty(metaVersion)) {
-                    if (metaVersion.equals(version)) {
+        if (requestAttributes != null && requestAttributes instanceof ServletRequestAttributes) {
+            String version = ((ServletRequestAttributes) requestAttributes).getRequest().getHeader("version");
+            logger.info("grayRule key is : {},version is {} ，threadName is {}", key, version, Thread.currentThread().getName());
+            if (!StringUtils.isEmpty(version)) {
+                List<Server> serverList = this.getPredicate().getEligibleServers(this.getLoadBalancer().getAllServers(), key);
+                for (Server server : serverList) {
+                    logger.info("grayRule server is : {}", server);
+                    Map<String, String> metadata;
+                    metadata = ((DiscoveryEnabledServer) server).getInstanceInfo().getMetadata();
+                    String metaVersion = metadata.get("version");
+                    logger.info("grayRule metaVersion is : {}", metaVersion);
+                    if (!StringUtils.isEmpty(metaVersion) && metaVersion.equals(version)) {
                         return server;
                     }
                 }

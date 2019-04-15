@@ -27,11 +27,11 @@ serviceB:
 feign:
   hystrix:
     enabled: true
-hystrix1:
+
+hystrix:
   propagate:
     request-attribute:
       enabled: true
-hystrix:
   command:
     default:
       execution:
@@ -40,3 +40,9 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 6000000
+ribbon:
+  ReadTimeout: 600000
+  ConnectTimeout: 250
+  OkToRetryOnAllOperations: true
+  MaxAutoRetriesNextServer: 2 # 在当前候选服务实例重试若干次（见MaxAutoRetries）之后，最多尝试多少次下一个候选服务实例
+  MaxAutoRetries: 2           # 当前候选服务实例最多被尝试多少次，与上面的参数配合即可决定每次请求最多合计尝试多少次

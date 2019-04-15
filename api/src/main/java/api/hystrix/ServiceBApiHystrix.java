@@ -20,6 +20,11 @@ public class ServiceBApiHystrix implements ServiceBApi {
         return getBaseResponse();
     }
 
+    @Override
+    public BaseResponse sayLinkHelloDirc(String name) {
+        return getBaseResponse();
+    }
+
     private BaseResponse getBaseResponse() {
         BaseResponse baseResponse = new BaseResponse();
         baseResponse.setCode(500);

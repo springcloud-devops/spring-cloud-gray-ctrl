@@ -24,4 +24,7 @@ public interface ServiceBApi {
 
     @RequestMapping(value = "/hello_link/{userName}",method = RequestMethod.GET)
     BaseResponse sayLinkHello(@PathVariable(value = "userName")String name);
+
+    @RequestMapping(value = "/hello_link1/{userName}",method = RequestMethod.GET)
+    BaseResponse sayLinkHelloDirc(@PathVariable(value = "userName")String name);
 }

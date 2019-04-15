@@ -37,7 +37,7 @@ public class BTestController {
         BaseResponse baseResponse = new BaseResponse();
         baseResponse.setCode(200);
         try {
-            Thread.sleep(1000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
