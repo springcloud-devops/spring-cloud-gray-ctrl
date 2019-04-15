@@ -4,6 +4,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = {"org.ext.sc.hystrix","api"})
+@ComponentScan(basePackages = {"api"})
 public class GrayConfig {
 }

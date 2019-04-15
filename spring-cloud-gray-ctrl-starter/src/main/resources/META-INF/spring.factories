@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.ext.sc.hystrix.config.FeignSupportConfig,\
+  org.ext.sc.hystrix.config.HystrixRequestAttributeAutoConfiguration
