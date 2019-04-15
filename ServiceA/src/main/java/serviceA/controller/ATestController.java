@@ -22,7 +22,7 @@ import javax.annotation.Resource;
 public class ATestController {
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger("TestController");
 
-    @Autowired
+    @Resource
     private GatewayApi gatewayApi;
     @Resource
     private  ServiceBApi serviceBApi;

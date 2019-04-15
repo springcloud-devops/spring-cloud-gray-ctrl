@@ -12,8 +12,20 @@
 ```$txt
    hystrix 对于每一个服务启动了一个线程池做调用，如果启动了线程池，则其实请求会复制到对应的hystrix 的线程里，
    这时候再去调用ribbon 做负载均衡是获取不到线程变量的，即此时的 RequestContext ，RequestHoder 等使用ThreadLocal
-   是无效的。可以使用过滤器，使用hystrix的线程变量在ribbon 负载均衡的时候获取对应的自定义信息，
+   是无效的。可以使用过滤器或者定义hystrix 策略，使用hystrix的线程变量在ribbon 负载均衡的时候获取对应的自定义信息，
    从而实现定制化的负载均衡。
    
 
 ```
+###  实现自定义hystrix 负载均衡策略
+参阅文档：[hystrix传播对象](http://www.itmuch.com/spring-cloud-sum/hystrix-threadlocal/)
+本组件采用了自定义hystrix实现了变量与hystrix的线程变量的绑定。通过FeignClientInterceptor
+存放了header,这样在每一层的服务调度的时候，都可以传递header.
+
+#### 参考：RequestAttributeHystrixConcurrencyStrategy
+  这个类就是在hystrix的策略组里加入了自己的策略，然后对于主线程的requestContext进行了与
+  hystrix 子线程的绑定。
+  
+
+
+
