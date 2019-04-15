@@ -1,6 +1,7 @@
 package api;
 
 
+import api.hystrix.GatewayHystrix;
 import demo.sdk.BaseResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by :Guozhihua
  * Date： 2017/8/28.
  */
-@FeignClient(value = "gateway",path = "/api/")
+@FeignClient(value = "gateway",path = "/api/",fallback = GatewayHystrix.class)
 public interface GatewayApi {
 
     @RequestMapping(value = "b/b/hello/{userName}",method = RequestMethod.GET)

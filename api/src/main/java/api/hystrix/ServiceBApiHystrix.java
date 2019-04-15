@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-public class ServiceBApiHystrix implements ServiceBApi {
+public class ServiceBApiHystrix extends CommonHystrix implements ServiceBApi {
     @Override
     public BaseResponse sayHello(String name) {
         return getBaseResponse();
@@ -25,11 +25,5 @@ public class ServiceBApiHystrix implements ServiceBApi {
         return getBaseResponse();
     }
 
-    private BaseResponse getBaseResponse() {
-        BaseResponse baseResponse = new BaseResponse();
-        baseResponse.setCode(500);
-        baseResponse.setData("serviceB is down ");
-        baseResponse.setStatus("down");
-        return baseResponse;
-    }
+
 }

@@ -9,7 +9,6 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.constraints.AssertTrue;
 import java.util.Enumeration;
 
 public class FeignBaseRequestIntercept implements RequestInterceptor {
