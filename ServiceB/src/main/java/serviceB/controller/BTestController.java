@@ -36,11 +36,7 @@ public class BTestController {
     public BaseResponse sayHello(@PathVariable("userName") String username, HttpServletRequest request) {
         BaseResponse baseResponse = new BaseResponse();
         baseResponse.setCode(200);
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
         baseResponse.setData("serviceB-gray: hello " + username + ",version is " + request.getHeader("version"));
         baseResponse.setStatus("success");
         System.out.println(baseResponse.getData());

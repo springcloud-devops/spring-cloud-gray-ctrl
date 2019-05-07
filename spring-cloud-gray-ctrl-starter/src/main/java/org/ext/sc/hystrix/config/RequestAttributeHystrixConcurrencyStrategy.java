@@ -1,6 +1,7 @@
 package org.ext.sc.hystrix.config;
 
 
+import com.google.common.collect.Sets;
 import com.netflix.hystrix.HystrixThreadPoolKey;
 import com.netflix.hystrix.HystrixThreadPoolProperties;
 import com.netflix.hystrix.strategy.HystrixPlugins;
@@ -14,9 +15,17 @@ import com.netflix.hystrix.strategy.properties.HystrixPropertiesStrategy;
 import com.netflix.hystrix.strategy.properties.HystrixProperty;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.ConfigurableEnvironment;
+import org.springframework.core.env.Environment;
+import org.springframework.core.env.MutablePropertySources;
+import org.springframework.core.env.PropertiesPropertySource;
+import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 
+import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -28,7 +37,16 @@ import java.util.concurrent.TimeUnit;
  * {@link HystrixConcurrencyStrategy} is necessary that injects request attributes. This
  * enables the use of request and response inside hystrix fallbacks.
  */
+@Component
 public class RequestAttributeHystrixConcurrencyStrategy extends HystrixConcurrencyStrategy {
+    @Autowired
+    private Environment environment;
+
+
+    private  static final String  DEFAULT_RULE="org.ext.sc.hystrix.rule.GrayRule";
+    private  static final String  LB_RULE_CLASSNAME_SUFFIX=".ribbon.NFLoadBalancerRuleClassName";
+
+    private Set<String> LB_SERVER_SET= Sets.newConcurrentHashSet();
     private static final Log log = LogFactory
             .getLog(RequestAttributeHystrixConcurrencyStrategy.class);
 
@@ -88,6 +106,7 @@ public class RequestAttributeHystrixConcurrencyStrategy extends HystrixConcurren
                                             HystrixProperty<Integer> maximumPoolSize,
                                             HystrixProperty<Integer> keepAliveTime, TimeUnit unit,
                                             BlockingQueue<Runnable> workQueue) {
+        setLbRuleEnv(threadPoolKey);
         return this.delegate.getThreadPool(threadPoolKey, corePoolSize, maximumPoolSize,
                 keepAliveTime, unit, workQueue);
     }
@@ -95,7 +114,19 @@ public class RequestAttributeHystrixConcurrencyStrategy extends HystrixConcurren
     @Override
     public ThreadPoolExecutor getThreadPool(HystrixThreadPoolKey threadPoolKey,
                                             HystrixThreadPoolProperties threadPoolProperties) {
+
+        setLbRuleEnv(threadPoolKey);
         return this.delegate.getThreadPool(threadPoolKey, threadPoolProperties);
+    }
+
+    private void setLbRuleEnv(HystrixThreadPoolKey threadPoolKey) {
+        if(LB_SERVER_SET.add(threadPoolKey.toString().concat(LB_RULE_CLASSNAME_SUFFIX))){
+            ConfigurableEnvironment c = (ConfigurableEnvironment) environment;
+            Properties p = new Properties();
+            p.put(threadPoolKey+LB_RULE_CLASSNAME_SUFFIX, DEFAULT_RULE);
+            MutablePropertySources propertySources = c.getPropertySources();
+            propertySources.addLast(new PropertiesPropertySource("ribbon",p));
+        }
     }
 
     @Override

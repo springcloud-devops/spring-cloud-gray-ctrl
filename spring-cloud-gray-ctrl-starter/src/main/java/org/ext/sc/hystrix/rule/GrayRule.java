@@ -25,10 +25,9 @@ public class GrayRule extends ZoneAvoidanceRule {
             if (!StringUtils.isEmpty(version)) {
                 List<Server> serverList = this.getPredicate().getEligibleServers(this.getLoadBalancer().getAllServers(), key);
                 for (Server server : serverList) {
-                    logger.info("grayRule server is : {}", server);
                     Map<String, String> metadata = ((DiscoveryEnabledServer) server).getInstanceInfo().getMetadata();
                     String metaVersion = metadata.get("version");
-                    logger.info("grayRule metaVersion is : {}", metaVersion);
+                    logger.info("grayRule metaVersion is : {}，server is {}", metaVersion,server);
                     if (!StringUtils.isEmpty(metaVersion) && metaVersion.equals(version)) {
                         return server;
                     }

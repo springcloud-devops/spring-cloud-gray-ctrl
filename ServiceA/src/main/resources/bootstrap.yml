@@ -4,7 +4,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.10.133:8761/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/
 #      有了密码之后的
 #      eureka.client.serviceUrl.defaultZone=http://apple:123456@localhost:7006/eureka/
   instance:
@@ -21,17 +21,12 @@ sso:
 server:
   port: 8081
 
-serviceB:
-  ribbon:
-    NFLoadBalancerRuleClassName: org.ext.sc.hystrix.rule.GrayRule
+
 feign:
   hystrix:
     enabled: true
 
 hystrix:
-  propagate:
-    request-attribute:
-      enabled: true
   command:
     default:
       execution:
@@ -40,6 +35,7 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 6000000
+
 ribbon:
   ReadTimeout: 600000
   ConnectTimeout: 250
