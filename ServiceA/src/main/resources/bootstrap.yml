@@ -14,7 +14,7 @@ eureka:
     appname: ${spring.application.name}
     instance-id: ${spring.cloud.client.ip-address}:${server.port}-${random.int}
     metadata-map:
-      version: 1.0
+      G-Version: 1.0
 sso:
   name: serviceA
 
