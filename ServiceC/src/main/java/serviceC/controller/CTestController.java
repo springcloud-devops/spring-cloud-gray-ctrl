@@ -31,7 +31,7 @@ public class CTestController {
 
         try {
             String tsy=null;
-            String from = HttpUtils.getFrom("http://172.21.2.229:8000", null);
+            String from = HttpUtils.getFrom("http://myservice:8000", null);
             System.out.println("**********from********************");
         } catch (Exception e) {
             e.printStackTrace();

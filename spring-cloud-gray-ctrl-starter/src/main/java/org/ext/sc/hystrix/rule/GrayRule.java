@@ -20,14 +20,13 @@ public class GrayRule extends ZoneAvoidanceRule {
     public Server choose(Object key) {
         RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
         if (requestAttributes != null && requestAttributes instanceof ServletRequestAttributes) {
-            String version = ((ServletRequestAttributes) requestAttributes).getRequest().getHeader("version");
-            logger.info("grayRule key is : {},version is {} ，threadName is {}", key, version, Thread.currentThread().getName());
+            String version = ((ServletRequestAttributes) requestAttributes).getRequest().getHeader("G-Version");
             if (!StringUtils.isEmpty(version)) {
                 List<Server> serverList = this.getPredicate().getEligibleServers(this.getLoadBalancer().getAllServers(), key);
                 for (Server server : serverList) {
                     Map<String, String> metadata = ((DiscoveryEnabledServer) server).getInstanceInfo().getMetadata();
-                    String metaVersion = metadata.get("version");
-                    logger.info("grayRule metaVersion is : {}，server is {}", metaVersion,server);
+                    String metaVersion = metadata.get("G-Version");
+                    logger.debug("grayRule metaVersion is : {}", metaVersion);
                     if (!StringUtils.isEmpty(metaVersion) && metaVersion.equals(version)) {
                         return server;
                     }
