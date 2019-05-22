@@ -1,6 +1,7 @@
 package org.ext.sc.hystrix.config;
 
 
+import com.netflix.config.ConfigurationManager;
 import feign.RequestInterceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

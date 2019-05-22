@@ -32,9 +32,9 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>com.gray</groupId>
-            <artifactId>spring-cloud-gray-ctrl-starter</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>com.cheche365.dawn</groupId>
+            <artifactId>cheche365-dawn-sc-ext-ribbon-starter</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ConditionalOnClass({ Hystrix.class })
-@ConditionalOnProperty(value = "hystrix.propagate.request-attribute.enabled", matchIfMissing = false,havingValue = "true")
+//@ConditionalOnProperty(value = "hystrix.propagate.request-attribute.enabled", matchIfMissing = false,havingValue = "true")
 @EnableConfigurationProperties(HystrixRequestAttributeProperties.class)
 public class HystrixRequestAttributeAutoConfiguration {
     private static Logger logger = LoggerFactory.getLogger(HystrixRequestAttributeAutoConfiguration.class);

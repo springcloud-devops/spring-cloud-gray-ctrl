@@ -4,7 +4,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.10.133:8761/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/
 #      有了密码之后的
 #      eureka.client.serviceUrl.defaultZone=http://apple:123456@localhost:7006/eureka/
   instance:
@@ -12,26 +12,20 @@ eureka:
     leaseRenewalIntervalInSeconds: 10     # 续约更新时间间隔（默认30秒）
     leaseExpirationDurationInSeconds: 30  # 续约到期时间（默认90秒）
     appname: ${spring.application.name}
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}-${random.int}
-    metadata-map:
-      version: 1.0
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
 sso:
   name: serviceA
 
 server:
   port: 8081
 
-serviceB:
-  ribbon:
-    NFLoadBalancerRuleClassName: org.ext.sc.hystrix.rule.GrayRule
+
 feign:
   hystrix:
     enabled: true
 
 hystrix:
-  propagate:
-    request-attribute:
-      enabled: true
   command:
     default:
       execution:
@@ -40,6 +34,7 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 6000000
+
 ribbon:
   ReadTimeout: 600000
   ConnectTimeout: 250

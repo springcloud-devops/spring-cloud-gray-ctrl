@@ -2,6 +2,7 @@ package serviceA.controller;
 
 import api.GatewayApi;
 import api.ServiceBApi;
+import api.ServiceCApi;
 import demo.sdk.BaseResponse;
 import io.swagger.annotations.Api;
 import org.slf4j.LoggerFactory;
@@ -26,6 +27,9 @@ public class ATestController {
     private GatewayApi gatewayApi;
     @Resource
     private  ServiceBApi serviceBApi;
+
+    @Autowired
+    private ServiceCApi serviceCApi;
     @RequestMapping (value = "test/{userName}", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public BaseResponse  test(@PathVariable("userName") String username) {
@@ -40,17 +44,17 @@ public class ATestController {
         return baseResponse;
     }
 
-    @RequestMapping (value = "test1/{userName}", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping (value = "testB/{userName}", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
-    public BaseResponse  test1(@PathVariable("userName") String username) {
+    public BaseResponse  testB(@PathVariable("userName") String username) {
         BaseResponse baseResponse =serviceBApi.sayHello(username);
         return baseResponse;
     }
 
-    @RequestMapping (value = "test_link1/{userName}", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping (value = "testC/{userName}", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
-    public BaseResponse  test_link1(@PathVariable("userName") String username) {
-        BaseResponse baseResponse =serviceBApi.sayLinkHelloDirc(username);
+    public BaseResponse  testC(@PathVariable("userName") String username) {
+        BaseResponse baseResponse =serviceCApi.sayLinkHello(username);
         return baseResponse;
     }
 
