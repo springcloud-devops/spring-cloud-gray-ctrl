@@ -21,6 +21,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.core.env.MutablePropertySources;
 import org.springframework.core.env.PropertiesPropertySource;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 
@@ -43,7 +44,7 @@ public class RequestAttributeHystrixConcurrencyStrategy extends HystrixConcurren
     private Environment environment;
 
 
-    private  static final String  DEFAULT_RULE="org.ext.sc.hystrix.rule.GrayRule";
+    private  static  String  DEFAULT_RULE="org.ext.sc.hystrix.rule.GrayRule";
     private  static final String  LB_RULE_CLASSNAME_SUFFIX=".ribbon.NFLoadBalancerRuleClassName";
 
     private Set<String> LB_SERVER_SET= Sets.newConcurrentHashSet();
@@ -121,6 +122,10 @@ public class RequestAttributeHystrixConcurrencyStrategy extends HystrixConcurren
 
     private void setLbRuleEnv(HystrixThreadPoolKey threadPoolKey) {
         if(LB_SERVER_SET.add(threadPoolKey.toString().concat(LB_RULE_CLASSNAME_SUFFIX))){
+            String className = this.environment.getProperty("ribbon.NFLoadBalancerRuleClassName");
+            if(StringUtils.hasText(className)){
+                DEFAULT_RULE=className;
+            }
             ConfigurableEnvironment c = (ConfigurableEnvironment) environment;
             Properties p = new Properties();
             p.put(threadPoolKey+LB_RULE_CLASSNAME_SUFFIX, DEFAULT_RULE);
